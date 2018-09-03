@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
+import lombok.Data;
 
 import java.io.Serializable;
 
@@ -16,6 +17,7 @@ import java.io.Serializable;
  * @since 2017-07-11
  */
 @TableName("sys_relation")
+@Data
 public class Relation extends Model<Relation> {
 
     private static final long serialVersionUID = 1L;
@@ -35,41 +37,9 @@ public class Relation extends Model<Relation> {
     private Integer roleid;
 
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Long getMenuid() {
-        return menuid;
-    }
-
-    public void setMenuid(Long menuid) {
-        this.menuid = menuid;
-    }
-
-    public Integer getRoleid() {
-        return roleid;
-    }
-
-    public void setRoleid(Integer roleid) {
-        this.roleid = roleid;
-    }
-
     @Override
     protected Serializable pkVal() {
         return this.id;
     }
 
-    @Override
-    public String toString() {
-        return "Relation{" +
-                "id=" + id +
-                ", menuid=" + menuid +
-                ", roleid=" + roleid +
-                "}";
-    }
 }

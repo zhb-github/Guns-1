@@ -1,7 +1,7 @@
 package com.stylefeng.guns.modular.code.factory;
 
 
-import com.stylefeng.guns.GunsApplication;
+import com.stylefeng.guns.AdminApplication;
 import com.stylefeng.guns.core.CoreFlag;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.generator.action.model.GenQo;
@@ -44,7 +44,7 @@ public class DefaultTemplateFactory {
         GenQo genQo = new GenQo();
         genQo.setProjectPath(ToolUtil.getWebRootPath(null));
         genQo.setAuthor("stylefeng");
-        genQo.setProjectPackage(GunsApplication.class.getPackage().getName());
+        genQo.setProjectPackage(AdminApplication.class.getPackage().getName());
         genQo.setCorePackage(CoreFlag.class.getPackage().getName());
         genQo.setIgnoreTabelPrefix("sys_");
         genQo.setModuleName("system");

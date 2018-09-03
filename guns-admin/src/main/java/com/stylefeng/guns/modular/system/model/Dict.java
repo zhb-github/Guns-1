@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
+import lombok.Data;
 
 
 import java.io.Serializable;
@@ -17,6 +18,7 @@ import java.io.Serializable;
  * @since 2017-07-11
  */
 @TableName("sys_dict")
+@Data
 public class Dict extends Model<Dict> {
 
 	private static final long serialVersionUID = 1L;
@@ -49,68 +51,9 @@ public class Dict extends Model<Dict> {
 	private String tips;
 
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public Integer getNum() {
-		return num;
-	}
-
-	public void setNum(Integer num) {
-		this.num = num;
-	}
-
-	public Integer getPid() {
-		return pid;
-	}
-
-	public void setPid(Integer pid) {
-		this.pid = pid;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getTips() {
-		return tips;
-	}
-
-	public void setTips(String tips) {
-		this.tips = tips;
-	}
-
 	@Override
 	protected Serializable pkVal() {
 		return this.id;
 	}
 
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
-
-	@Override
-	public String toString() {
-		return "Dict{" +
-				"id=" + id +
-				", num=" + num +
-				", pid=" + pid +
-				", name='" + name + '\'' +
-				", code='" + code + '\'' +
-				", tips='" + tips + '\'' +
-				'}';
-	}
 }
